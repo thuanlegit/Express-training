@@ -1,0 +1,27 @@
+extends ../layouts/common.layout.pug
+
+block content
+	h1 Register
+	each error in errors
+		.alert.alert-danger= error
+	form(action="/users/create", method="POST")
+		.form-group
+			label(for='exampleInputUserName1') User name
+			input#exampleInputUserName1.form-control(type='text' placeholder='User name' name="name" value=values ? values.name : "")
+		.form-group
+			label(for='exampleInputAge1') Age
+			input#exampleInputAge1.form-control(type='number' placeholder='Age' name="age" value=values ? values.age : "")
+		.form-group
+			label(for='exampleInputPhone1') Phone
+			input#exampleInputPhone1.form-control(type='number' placeholder='Phone' name="phone" value=values ? values.phone : "")
+		.form-group
+			label(for='exampleInputEmail1') Email address
+			input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp' placeholder='Enter email' name="email" value=values ? values.email : "")
+			small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+		.form-group
+			label(for='exampleInputPassword1') Password
+			input#exampleInputPassword1.form-control(type='password' placeholder='Password' name="password" value=values ? values.password : "")
+		.form-group.form-check
+			input#exampleCheck1.form-check-input(type='checkbox')
+			label.form-check-label(for='exampleCheck1') Check me out
+		button.btn.btn-primary(type='submit') Submit

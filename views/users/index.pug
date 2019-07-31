@@ -1,0 +1,25 @@
+extends ../layouts/common.layout.pug
+
+block content
+	p Users
+	form(action="/users/search", method="GET")
+		.input-group.mb-3
+			input.form-control(type='text' placeholder="Recipient's username" aria-label="username" aria-describedby='basic-addon2' name="q" value= nameSearch)
+			.input-group-append
+			button.btn.btn-primary Search
+	a.btn.btn-primary(href="/users/create") Create new
+	table.table
+		tr
+			th.pr-5 Name
+			th.pr-5 Age
+			th Phone
+			th.pl-15 Email
+			th.pl-15 Detail
+		each item in users
+			tr
+				td= item.name
+				td= item.age
+				td= item.phone
+				td= item.email
+				td
+					a(href="./users/"+item.id) Detail
