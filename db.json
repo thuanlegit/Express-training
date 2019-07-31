@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "name": "thuan",
+      "age": "19",
+      "phone": "0961465030",
+      "email": "zeront2k@gmail.com",
+      "password": "123456789",
+      "id": "IhsiaY7of"
+    },
+    {
+      "name": "Thuan",
+      "age": "12",
+      "phone": "7657",
+      "email": "zeront2k@gmail.com",
+      "password": "456456",
+      "id": "oU-YX8L46"
+    },
+    {
+      "name": "a",
+      "age": "19",
+      "phone": "0961465030",
+      "email": "ducthuan@gmail.com",
+      "password": "1",
+      "id": "IhsiaY7of"
+    }
+  ]
+}
